@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Menu, X } from 'lucide-react';
 import photo1 from './assets/photo1.jpg';
+import expense from './assets/expense.png'
+import property from './assets/property.png'
+import spacer from './assets/spacer.png'
+import tracker from './assets/tracker.png'
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -14,15 +18,15 @@ export default function App() {
       tech: ["Python", "Database Management"],
       github: "https://github.com/Valentine101098/Sim-Tracker",
       type: "Professional Project",
-      image: "project1" // Placeholder for project screenshot
+      image: tracker // Placeholder for project screenshot
     },
     {
       title: "SpaceHub - Workspace Booking Platform",
-      description: "A full-featured workspace booking application for flexible office spaces with user authentication, real-time availability checking, and booking management functionality.",
+      description: "A full-featured workspace booking application for flexible office spaces with user authentication including google social authentication, real-time availability checking, and booking management functionality.",
       tech: ["React", "Flask", "SQLAlchemy", "Authentication"],
       github: "https://github.com/Valentine101098/Phase-5-Group-6-Spacer",
       type: "Full Stack Application",
-      image: "project2" // Placeholder for project screenshot
+      image: spacer // Placeholder for project screenshot
     },
     {
       title: "Property Management System",
@@ -30,7 +34,7 @@ export default function App() {
       tech: ["Python", "Flask", "SQLAlchemy", "React"],
       github: "https://github.com/Moringa-SDF-PT10/property-management-gr12",
       type: "Full Stack Application",
-      image: "project3" // Placeholder for project screenshot
+      image:property // Placeholder for project screenshot
     },
     {
       title: "Personal Expense Tracker",
@@ -38,7 +42,7 @@ export default function App() {
       tech: ["Python", "SQLAlchemy", "SQLite", "Colorama"],
       github: "https://github.com/Valentine101098/expense-tracker",
       type: "CLI Application",
-      image: "project4" // Placeholder for project screenshot
+      image: expense // Placeholder for project screenshot
     }
   ];
 
@@ -239,10 +243,9 @@ export default function App() {
           <div className="mb-6 sm:mb-8 animate-fade-in">
             <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-indigo-600 p-1 float-animation">
               <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
-                <div className="text-gray-400 text-center p-3 sm:p-4">
+
                   <img src={photo1} alt="Valentine Wanjiru" className="w-full h-full object-cover"/>
 
-                </div>
               </div>
             </div>
           </div>
@@ -346,12 +349,7 @@ export default function App() {
               <div key={index} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow project-card fade-in-element bg-white">
                 {/* Project Screenshot Placeholder */}
                 <div className="project-image-container h-40 sm:h-48 bg-gradient-to-br from-purple-100 to-indigo-100">
-                  <div className="project-image h-full flex items-center justify-center">
-                    <div className="text-gray-400 text-center p-4 sm:p-6">
-                      <p className="text-xs sm:text-sm font-medium">Project Screenshot</p>
-                      <p className="text-xs mt-1 sm:mt-2">({project.image}.jpg/png)</p>
-                    </div>
-                  </div>
+                  <img src={project.image} alt={project.title} className="project-image w-full h-full object-cover"/>
                 </div>
 
                 <div className="p-4 sm:p-6">
