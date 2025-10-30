@@ -5,6 +5,8 @@ import expense from './assets/expense.png'
 import property from './assets/property.png'
 import spacer from './assets/spacer.png'
 import tracker from './assets/tracker.png'
+import resume from './assets/VALENTINE_WANJIRU_RESUME.pdf'
+
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -299,7 +301,7 @@ export default function App() {
             <div className="md:col-span-2 space-y-4 sm:space-y-6 text-gray-700 leading-relaxed fade-in-element">
               <p className="text-base sm:text-lg">
                 I'm a motivated software developer with a strong foundation in full-stack development.
-                Currently completing my Software Engineering Bootcamp at Moringa School, I combine technical
+                Having recently completed my Software Engineering Bootcamp at Moringa School, I combine technical
                 skills with analytical thinking from my background in Economics and Statistics.
               </p>
               <p className="text-base sm:text-lg">
@@ -316,7 +318,7 @@ export default function App() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-purple-600 text-sm sm:text-base">Software Engineering Bootcamp</p>
-                  <p className="text-xs sm:text-sm text-gray-600">Moringa School (Expected Nov 2025)</p>
+                  <p className="text-xs sm:text-sm text-gray-600">Moringa School</p>
                 </div>
                 <div>
                   <p className="font-medium text-purple-600 text-sm sm:text-base">Bachelor of Economics & Statistics</p>
@@ -424,6 +426,18 @@ export default function App() {
               <a href="https://www.linkedin.com/in/valentine-wanjiru-146301224" target="_blank" rel="noopener noreferrer"
                  className="text-gray-700 hover:text-purple-600 transition-all transform hover:scale-110">
                 <Linkedin size={26} className="sm:w-7 sm:h-7" />
+              </a>
+            </div>
+            <div className="mt-8">
+              <a
+                href={resume}
+                download="Valentine_Wanjiru_Resume.pdf"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download Resume
               </a>
             </div>
           </div>
